@@ -47,5 +47,5 @@ CREATE TABLE generar_facturas (
 
 INSERT INTO clientes VALUES (NULL, 'Mario', 'Medrano', 'Z1234567X', 605205305, 'mario@gmail.com'), 
 (NULL, 'Josué', 'Pérez', 'Z7654321X', 611235987, 'josuepz@gmail.com');
-
+
 SELECT * FROM clientes;

@@ -23,12 +23,14 @@ GRANT ALL ON *.* TO 'root2'@'%' WITH GRANT OPTION;
 
 -- Ver los permisos de un usuario
 SHOW GRANTS FOR 'denis'@'localhost';
+SHOW GRANTS FOR 'root2'@'%';
 
 -- QUITAR PERMISOS
 REVOKE SELECT ON ejercicio7.empleados FROM 'denis'@'localhost';
 
 -- Eliminar usuarios
-DROP USER 'denis'@'localhost';
+DROP USER 'gamma'@'192.168.0';
+DROP USER 'beta'@'192.168.0.167';
 
 -- Otorgar permisos
 GRANT USAGE ON ejercicio7.empleado TO 'denis'@'localhost';

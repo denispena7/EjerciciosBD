@@ -41,8 +41,11 @@ CREATE TABLE usuarios (
     PRIMARY KEY (idUsuario)
 );
 
+ALTER TABLE usuarios CHANGE nombreUsuario nombreUsuario VARCHAR(255) NOT NULL;
+
 INSERT INTO usuarios VALUES (null, 'Admin','c1c224b03cd9bc7b6a86d77f5dace40191766c485cd55dc48caf9ac873335d6f', 0), 
-(null, '0e35f6e9742e074dfd62e874de3c242c6d9b64c21bf9afbaf3d11f05579b4495', 'Basic', 1);
+(null, 'Basic', '0e35f6e9742e074dfd62e874de3c242c6d9b64c21bf9afbaf3d11f05579b4495', 1);
 
 SELECT * FROM departamentos;
 SELECT * FROM empleados;
+SELECT * FROM usuarios;
