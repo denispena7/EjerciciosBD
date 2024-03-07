@@ -37,7 +37,6 @@ CREATE TABLE maquinas (
     FOREIGN KEY (idSedeFK) REFERENCES sedes (idSede)
 );
 
-DESCRIBE maquinas;
 
 -- Tabla clientes 
 CREATE TABLE clientes (
