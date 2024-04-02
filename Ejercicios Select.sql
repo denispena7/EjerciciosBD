@@ -276,3 +276,56 @@ FROM
 WHERE
 	comisionEmpleado >= (salarioEmpleado / 2)
 ORDER BY 1;
+
+-- Ejercicio 3.3
+SELECT
+	nombreEmpleado AS 'Nombre Empleado',
+    CONCAT(salarioEmpleado + (hijosEmpleado * 500), ' €') AS 'Salario Total'
+FROM
+	empleados
+WHERE
+	hijosEmpleado >= 4
+ORDER BY 1;
+
+-- Ejercicio 3.4
+SELECT
+	CONCAT('Departamento de ', nombreDepartamento) AS 'Nombre Departamento'
+FROM
+	departamentos
+WHERE
+	presupuestoDepartamento < 5
+ORDER BY 1;
+
+-- Ejercicio 3.5
+SELECT
+	nombreDepartamento AS 'Nombre Departamento',
+    CONCAT(ROUND((presupuestoDepartamento * 9 / 12) + (presupuestoDepartamento * 1.1 * 3 / 12), 2), ' €')  AS 'Presupuesto anual total'
+FROM
+	departamentos
+WHERE
+	(presupuestoDepartamento * 9 / 12) > 5
+ORDER BY 1;
+
+-- Ejercicio 3.6
+SELECT
+	nombreEmpleado AS 'Nombre Empleado',
+    CONCAT(ROUND(salarioEmpleado * 12, 2),' €') AS 'Salario Anual Actual',
+    CONCAT(ROUND(salarioEmpleado * 12 * 1.06, 2), ' €') AS 'Salario Anual Primer Año',
+    CONCAT(ROUND(salarioEmpleado * 12 * 1.06 * 1.06, 2), ' €') AS 'Salario Anual Segundo Año',
+    CONCAT(ROUND(salarioEmpleado * 12 * 1.06 * 1.06 * 1.06, 2), ' €') AS 'Salario Anual Tercer Año'
+FROM
+	empleados
+WHERE
+	hijosEmpleado > 4
+ORDER BY 1;
+
+
+
+
+
+
+
+
+
+
+
